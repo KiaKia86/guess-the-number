@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: #0a0a0a;
+  color: #ff0077;
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+  text-align: center;
+  background: rgba(10, 10, 10, 0.8);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 2px solid #ff0077;
+  box-shadow: 0 0 20px #ff0077, 0 0 40px #ff0077, 0 0 60px #ff0077;
+  animation: glow 1.5s infinite alternate;
+}
+
+/* Neon Text */
+.neon-text {
+  text-shadow: 0 0 5px #ff0077, 0 0 10px #ff0077, 0 0 20px #ff0077;
+  animation: flicker 1.5s infinite alternate;
+}
+
+/* Input Styling */
+.neon-input {
+  background: transparent;
+  border: 2px solid #ff0077;
+  color: #ff0077;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 0 10px #ff0077;
+  animation: glow 1.5s infinite alternate;
+}
+
+.neon-input::placeholder {
+  color: #ff0077;
+  opacity: 0.5;
+}
+
+/* Button Styling */
+.neon-button {
+  background: transparent;
+  border: 2px solid #ff0077;
+  color: #ff0077;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff0077;
+  transition: all 0.3s ease;
+  animation: glow 1.5s infinite alternate;
+}
+
+.neon-button:hover {
+  background: #ff0077;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px #ff0077, 0 0 40px #ff0077;
+}
+
+/* Animations */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px #ff0077, 0 0 10px #ff0077, 0 0 20px #ff0077;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff0077, 0 0 20px #ff0077, 0 0 40px #ff0077;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
